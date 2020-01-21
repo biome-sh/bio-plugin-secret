@@ -1,4 +1,4 @@
-# Biome Plugin Git Source
+# Biome Plugin Secret
 
 This plugin adds `do_secret_copy` method which helps your deal with secret files
 
@@ -10,10 +10,10 @@ This plugin adds `do_secret_copy` method which helps your deal with secret files
 4. If you project has multiple packages you can prefix secret name with `pkg_name`: `$pkg_name-SECRET_FILE`
 
 ```
-pkg_build_deps+=(biome/bio-plugin-secrets)
+pkg_build_deps+=(biome/bio-plugin-secret)
 
 do_setup_environment() {
-  source $(pkg_path_for biome/bio-plugin-secrets)/lib/plugin.sh
+  source $(pkg_path_for biome/bio-plugin-secret)/lib/plugin.sh
 
   # Will try to copy:
   # * .secrets/PKG_NAME-netrc
@@ -24,4 +24,4 @@ do_setup_environment() {
 }
 ```
 
-Consider source [bio-plugin-secrets](habitat/lib/plugin.sh)
+Consider source [bio-plugin-secret](habitat/lib/plugin.sh)
